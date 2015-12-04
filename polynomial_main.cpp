@@ -17,7 +17,7 @@ using namespace std;
 int main(void){
 	const int dot_num=50;
 	const double xscale=100.;
-	const char *filename="data//polynomial_data.csv";
+	const char *filename="polynomial_data.csv";
 	FILE *in_file=fopen(filename,"r");
 	const char field_terminator = ',';
 	const char line_terminator  = '\n';
