@@ -23,14 +23,14 @@ public:
 		index.clear();
 		coefficient.clear();
 	}
-	friend graphic_value polynomial_to_graphic(Polynomial& pol,int dot_num, double xscale){
+     graphic_value polynomial_to_graphic(int dot_num, double xscale){
         double graphic_dot[dot_num][2];
         double (*p)[2]=graphic_dot;
         double sum=0;
         for(int i=0; i<dot_num; i++){
         	 double x=xscale/dot_num*i;
-        	 for(unsigned int j=0;j<pol.coefficient.size();j++){
-        		 sum+=pol.coefficient[j]*index_mutiplication(x,pol.index[j]);
+        	 for(unsigned int j=0;j<this->coefficient.size();j++){
+        		 sum+=this->coefficient[j]*index_mutiplication(x,this->index[j]);
         	 }
              **(graphic_dot+i)=x;
              *(*(graphic_dot+i)+1)=sum;
